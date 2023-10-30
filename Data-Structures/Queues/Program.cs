@@ -3,7 +3,7 @@
     private static void Main(string[] args)
     {
         //! Declaracion
-        Queue<int> miCola = new Queue<int>();
+        Queue<int> miCola = new();
 
         //! Metodos
 
@@ -33,3 +33,5 @@
 
     }
 }
+
+//* FIFO

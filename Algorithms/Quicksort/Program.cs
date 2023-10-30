@@ -73,3 +73,13 @@
             Console.Write(arr[i] + " ");
     }
 }
+
+//? Quick Sort
+//* Time Complexity: 
+//* - Best Case: O(N log(N))
+//* - Average Case: O(N log(N))
+//* - Worst Case: O(N^2)
+//* Auxiliary Space: O(1)
+
+//* It is a divide-and-conquer algorithm
+//* The worst case occurs when the pivot is chosen poorly.

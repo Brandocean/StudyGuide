@@ -4,7 +4,7 @@
     {
         //! Declaracion
 
-        Stack<int> miPila = new Stack<int>();
+        Stack<int> miPila = new();
 
         //! Metodos
 
@@ -33,3 +33,5 @@
 
     }
 }
+
+//* LIFO
