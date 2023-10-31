@@ -6,24 +6,29 @@ using System.Threading.Tasks;
 namespace Tree;
 
 using System;
+class Node
+{
+    public int Data;
+    public Node Left;
+    public Node Right;
+
+    public Node(int data)
+    {
+        Data = data;
+        Left = null;
+        Right = null;
+    }
+}
 
 class BinaryTree
 {
-    class Node
+
+    public Node root;
+
+    public BinaryTree(int data)
     {
-        public int Data;
-        public Node Left;
-        public Node Right;
-
-        public Node(int data)
-        {
-            Data = data;
-            Left = null;
-            Right = null;
-        }
+        root = new Node(data);
     }
-
-    private Node root;
 
     public BinaryTree()
     {
@@ -98,7 +103,7 @@ class BinaryTree
         return root;
     }
 
-    private int MinValue(Node root)
+    private static int MinValue(Node root)
     {
         int minValue = root.Data;
         while (root.Left != null)
@@ -179,5 +184,49 @@ class BinaryTree
             Console.Write(root.Data + " ");
         }
     }
+
+    public void LevelOrderTraversal()
+    {
+        if (root == null)
+        {
+            Console.WriteLine("El árbol está vacío.");
+            return;
+        }
+
+        Queue<Node> queue = new Queue<Node>();
+        queue.Enqueue(root);
+
+        while (queue.Count > 0)
+        {
+            Node current = queue.Dequeue();
+            Console.Write(current.Data + " ");
+
+            if (current.Left != null)
+            {
+                queue.Enqueue(current.Left);
+            }
+
+            if (current.Right != null)
+            {
+                queue.Enqueue(current.Right);
+            }
+        }
+
+        Console.WriteLine();
+    }
 }
+
+//? Auxiliary Operations On Binary Tree:
+//* Finding the height of the tree
+//* Find the level of the tree
+//* Finding the size of the entire tree.
+
+//? Depth-First Search
+//* - Preorder Traversal: root – left child – right child
+//* - Inorder Traversal: left child – root – right child
+//* - Postorder Traversal: left child – right child - root
+
+//? Breadth-First Search
+//* Level Order Traversal : Visit nodes level-by-level and left-to-righ
+
 
