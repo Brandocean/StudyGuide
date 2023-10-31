@@ -12,7 +12,19 @@ internal class Program
 
         binaryTree.Insert(4);
 
-        binaryTree.PreOrderTraversal();
+        //binaryTree.PreOrderTraversal();
+
+        MaxHeap maxHeap = new();
+
+        maxHeap.Insert(100);
+        maxHeap.Insert(40);
+        maxHeap.Insert(50);
+        maxHeap.Insert(10);
+        maxHeap.Insert(15);
+        maxHeap.Insert(50);
+        maxHeap.Insert(40);
+
+        //maxHeap.PrintHeap();
     }
     
 }
@@ -21,3 +33,6 @@ internal class Program
 //* Trees demand more memory space requirements
 //* Tree offer Efficient Searching
 //* Ancenstors and descendants
+
+//* The height of the complete binary tree is always logn
+//* The time complexity would also be O(logn)
