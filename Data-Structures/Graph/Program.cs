@@ -43,7 +43,12 @@ internal class Program
     }
 }
 
-// Insertion of Nodes/Edges in the graph – Insert a node into the graph.
-// Deletion of Nodes/Edges in the graph – Delete a node from the graph.
-// Searching on Graphs – Search an entity in the graph.
-// Traversal of Graphs – Traversing all the nodes in the graph.
+//* BFS
+//* Time Complexity: O(V+E), where V is the number of nodes and E is the number of edges.
+//* Auxiliary Space: O(V)
+//* It use queues
+
+//* DFS
+//* Time complexity: O(V + E), where V is the number of vertices and E is the number of edges in the graph.
+//* Auxiliary Space: O(V + E), since an extra visited array of size V is required, And stack size for iterative call to DFS function.
+//* It use stacks
